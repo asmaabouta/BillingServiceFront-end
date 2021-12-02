@@ -15,8 +15,6 @@
             </form>
 
 
-
-
             <table class="table table-hover table-bordered table-striped table-responsive-lg" >
               <thead>
               <th>#ID </th>
@@ -31,13 +29,13 @@
                 <td>{{product.name}}</td>
                 <td>{{product.price}}</td>
                 <td>{{product.quantity}}</td>
-
+                <td><a class="btn btn-dark" routerLink="/newproduct" style="width: 34%">edit</a><a class="btn btn-danger" routerLink="/newproduct">delete</a></td>
               </tr>
               </tbody>
 
             </table>
-            <button class="btn btn-primary">Ajouter un nouveau produit</button>
-
+            <a class="btn btn-primary float-right mb-2" routerLink="/newproduct">Ajouter un nouveau produit
+            </a>
           </div>
         </div>
       </div>

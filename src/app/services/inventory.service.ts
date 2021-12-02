@@ -13,4 +13,5 @@ export class InventoryService {
   getProductsList():Observable<any> {
     return this.http.get(environment.url+"/INVENTORY-SERVICE/products")
   }
+
 }
