@@ -10,6 +10,8 @@ import { ProductListComponent } from './components/product/product-list/product-
 import { NewProductComponent } from './components/product/new-product/new-product.component';
 import { EditProductComponent } from './components/product/edit-product/edit-product.component';
 import {FormsModule} from "@angular/forms";
+import { InvoiceListComponent } from './components/invoice/invoice-list/invoice-list.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import {FormsModule} from "@angular/forms";
     LoginComponent,
     ProductListComponent,
     NewProductComponent,
-    EditProductComponent
+    EditProductComponent,
+    InvoiceListComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

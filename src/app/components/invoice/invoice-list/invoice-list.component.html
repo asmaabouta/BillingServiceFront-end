@@ -1,0 +1,68 @@
+<div class="container">
+  <div class="card o-hidden border-0 shadow-lg my-5">
+    <div class="card-body p-0">
+      <!-- Nested Row within Card Body -->
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="p-5">
+
+            <div class="text-center">
+              <h1 class="h4 text-gray-900 mb-4" style="font-family:Cambria;"><img src="../../../assets/invoice.png" style="width:15%">La liste des factures </h1>
+            </div>
+            <form
+              class="d-none d-sm-inline-block form-inline mr-auto  my-2 my-md-0 mw-100 navbar-search">
+                <div class="input-group">
+                  <input type="text"  (change)="handleIdChange($event)" class="form-control bg-light border-0 small" placeholder="Rechercher ...">
+                  <button type="submit" (click)="getInvoiceById()" class="btn btn-primary">rechercher</button>
+                </div>
+            </form>
+            <div>
+              <form class="d-none d-sm-inline-block form-inline mr-auto  my-2 my-md-0 mw-100 navbar-search"></form>
+            </div>
+
+            <table class="table table-hover table-bordered table-striped table-responsive-lg" >
+              <thead>
+              <th>Date Facturation</th>
+              <th>Montant</th>
+              <th>Customer</th>
+              </thead>
+              <tbody>
+              <tr style="cursor: pointer;">
+                <td>{{invoice.date}}</td>
+                <td>{{invoice.amount}}</td>
+                <td>{{invoice.customerID}}</td>
+                <!--<td><a class="btn btn-dark" routerLink="/newproduct" style="width: 30%">edit</a><a class="btn btn-danger"
+                 routerLink="/newproduct" style="width: 30%">delete</a><a class="btn btn-info" routerLink="/newproduct" style="width: 30%">details</a></td>-->
+              </tr>
+              </tbody>
+
+            </table>
+            <h4 class="d-sm-flex align-items-center justify-content-center" style="font-family:Cambria;"><img src="../../assets/product.jpg" style="width: 7%"> La liste des produits </h4>
+            <table class="table table-hover table-bordered table-striped table-responsive-lg" >
+            <thead>
+            <th>ID</th>
+            <th>Nom Produit</th>
+            <th>Prix</th>
+            <th>Quantité</th>
+            </thead>
+            <tbody>
+            <tr style="cursor: pointer;" *ngFor="let product of productItems">
+              <td>{{product.productId}}</td>
+              <td>{{product.productName}}</td>
+              <td>{{product.price}}</td>
+              <td>{{product.quantity}}</td>
+              </tr>
+              </tbody>
+
+            </table>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- class="d-sm-flex align-items-center justify-content-center" -->
+</div>
